@@ -31,7 +31,7 @@ here are some steps, in case you forget how to do this.
 	- figure it out (it's not so bad)
 1. put the palworld somewhere safe
 	- `sudo cp -r depots/2394012/22460594 /opt/palworld`
-	- `sudo chown -r johnmadden:johnmadden /opt/palworld`
+	- `sudo chown -R johnmadden:johnmadden /opt/palworld`
 	- if your username isn't `johnmadden`, then you'll have to change that part i guess
 1. use this very nice javascript file
 	- `cp palman.js /opt/palworld/palman.js`
