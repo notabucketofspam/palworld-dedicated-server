@@ -1,0 +1,27 @@
+[Unit]
+Description=Palworld Dedicated Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+# Security: Run as your standard user, NEVER run this as root!
+User=johnmadden
+Group=johnmadden
+
+# The directory where your palman.js file lives
+WorkingDirectory=/opt/palworld
+
+# Execute Node.js and pass it your script
+# Note: Always use absolute paths in systemd! Run `which node` to verify this path.
+ExecStart=/usr/bin/node /opt/palworld/palman.js
+
+# Restart policy: If the Node script crashes, restart it after 5 seconds
+Restart=always
+RestartSec=5
+
+# Forward all console.log() output to the system journal
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
