@@ -40,7 +40,7 @@ here are some steps, in case you forget how to do this.
 1. use this very nice `systemd` service file
 	- `sudo cp palworld.service /etc/systemd/system/palworld.service`
 	- you also gotta edit the username in this one
-		- `sudo nano /etc/systemd/system/palworld.service1
+		- `sudo nano /etc/systemd/system/palworld.service`
 		- if you think it would help, consider legally changing your name to `johnmadden`
 1. actually start the server 
 	- `sudo systemctl daemon-reload`
